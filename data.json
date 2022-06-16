@@ -1,0 +1,70 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "Giấu Mặt"
+    },
+    {
+      "id": 2,
+      "name": "Lộ Mặt"
+    }
+  ],
+  "product": [
+    {
+      "name": "Joker",
+      "price": 10000,
+      "category_id": 1,
+      "img": "https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg",
+      "id": 5
+    },
+    {
+      "name": "Chúa Hmề",
+      "price": 30000,
+      "category_id": 2,
+      "img": "https://toigingiuvedep.vn/wp-content/uploads/2021/01/avatar-dep-cute.jpg",
+      "id": 6
+    },
+    {
+      "name": "Trấn Thành 2",
+      "price": 30000,
+      "category_id": 2,
+      "img": "https://khoinguonsangtao.vn/wp-content/uploads/2022/05/anh-avatar-dep-ngau-hinh-dai-dien.jpg",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Con Bò Cười",
+      "price": 23000,
+      "category_id": 1,
+      "img": "https://demoda.vn/wp-content/uploads/2022/03/avatar-nu-1.jpg"
+    },
+    {
+      "name": "Thằng đần",
+      "price": "1111",
+      "category_id": "2",
+      "img": "https://i.pinimg.com/originals/a0/cd/bf/a0cdbfa17c5d4b9d36f1b8fd0b18e36a.jpg",
+      "id": 9
+    },
+    {
+      "name": "Big Demon Boy",
+      "price": "666666",
+      "category_id": "2",
+      "img": "https://i.pinimg.com/736x/5a/3d/da/5a3dda4e2418747a4ddd59c71baa1ab1.jpg",
+      "id": 10
+    },
+    {
+      "name": "Con bò cười",
+      "price": "9999",
+      "category_id": "2",
+      "img": "https://cf.shopee.vn/file/d31af5dd5a368c48a6624bc19bcaf4eb",
+      "id": 11
+    },
+    {
+      "name": "Anh bạn à",
+      "price": "1000",
+      "category_id": "2",
+      "img": "https://lucloi.vn/wp-content/uploads/2021/08/Presentation1.jpg",
+      "id": 12
+    }
+  ]
+}

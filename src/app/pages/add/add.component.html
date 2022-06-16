@@ -1,0 +1,57 @@
+<div class='container'>
+    <h2 class="text-center">Thêm mới</h2>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class='signup'>
+                <form [formGroup]="formProduct" (ngSubmit)="submitProduct()">
+                    <input type='text' placeholder='Name:' required="" [(ngModel)]="form.name.value" formControlName="name" />
+                    <div *ngIf="form.name.invalid && (form.name.dirty || form.name.touched)" required>
+                        <div *ngIf="!form.name.errors?.['minLength']">
+                            <span class="text-danger font-italic">*tối thiểu 5 kí tự</span>
+                        </div>
+                        <div *ngIf="form.name.errors?.['required']">
+                            <span class="text-danger font-italic">*không được để rỗng</span>
+                        </div>
+                    </div>
+                    <input type='text' placeholder='Price:' required="" [(ngModel)]="form.price.value" formControlName="price" />
+                    <div *ngIf="form.price.invalid && (form.price.dirty || form.price.touched)">
+                        <div *ngIf="form.price.errors?.['min']">
+                            <span class="text-danger font-italic">*Giá trị tối thiểu là 0</span>
+                        </div>
+                    </div>
+                    <input type='text' placeholder='Category ID:' required="" [(ngModel)]="form.category_id.value" formControlName="category_id" />
+                    <div *ngIf="form.category_id.invalid && (form.category_id.dirty || form.category_id.touched)" required>
+                        <div *ngIf="form.category_id.errors?.['pattern']">
+                            <span class="text-danger font-italic">*Giá trị phải là 1 hoặc 2</span>
+                        </div>
+                        <div *ngIf="form.category_id.errors?.['required']">
+                            <span class="text-danger font-italic">*Không được để rỗng</span>
+                        </div>
+                    </div>
+                    <input type='text' placeholder='Link Image' required="" [(ngModel)]="form.img.value" formControlName="img" />
+                    <div *ngIf="form.img.invalid && (form.img.dirty || form.img.touched)" required>
+                        <div *ngIf="form.img.errors?.['required']">
+                            <span class="text-danger font-italic">*Không được để rỗng</span>
+                        </div>
+                    </div>
+                    <input type='submit' class="inputSubmit" placeholder='SUBMIT' [disabled]="form.img.invalid || form.name.invalid || form.price.invalid || form.category_id.invalid" />
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="jumbotron ml-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{{form.img.value}}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+                    </div>
+                    <div class="col-lg-8">
+                        <h3>{{form.name.value}}</h3>
+                        <p class="lead">Giá: {{form.price.value}}</p>
+                        <hr class="my-2">
+                        <p>Phân loại: {{form.category_id.value}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
